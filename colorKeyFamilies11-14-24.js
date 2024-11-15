@@ -1600,28 +1600,29 @@ var activeLayers = doc.artLayers
 var docHeight = parseInt(doc.height);
 var docLength = parseInt(doc.width);
 var docRes = parseInt(doc.resolution);
-const canvasOddNotesB = 'Canvas is 23 stitches high'
+const canvasOddNotesB = 'Canvas is 27 stitches high'
 const canvasOddNotesF = 'Canvas is 23 stitches high'
 var canvasNoteL = null
 var canvasNoteH = null
 var insertedNotes = []
 var endArray1 = [];
 
-var whiteArr = [];
-var blackArr = [];
-var tanArr = [];
-var greyArr = [];
-var pinkArr = [];
-var redArr = [];
-var orangeArr = [];
-var yellowArr = [];
-var goldArr = [];
-var greenArr = [];
-var blueArr = [];
-var purpleArr = [];
-var skinArr = [];
-var brownArr = [];
-
+var colorFams = {
+whiteArr = [],
+blackArr = [],
+tanArr = [],
+greyArr = [],
+pinkArr = [],
+redArr = [],
+orangeArr = [],
+yellowArr = [],
+goldArr = [],
+greenArr = [],
+blueArr = [],
+purpleArr = [],
+skinArr = [],
+brownArr = []
+}
 
 // Add a color sampler at the specified location and get the color
 var oldColor = app.foregroundColor
@@ -1630,10 +1631,9 @@ var colorSamplerRef = doc.colorSamplers.add(pixelLoc);
 app.foregroundColor = colorSamplerRef.color;
 colorSamplerRef.remove(); // Remove the color sampler after getting the color
 
+
+
 //extra notes based on canvas width or height///////////////////////////////////////////////////////////
-
-
-
 ///checks if it's a special key fob length
 if (docLength <= 150) {
     try {
@@ -1743,7 +1743,7 @@ if (doc.mode == 'DocumentMode.RGB' && docRes < 120) {// make sure that there is 
 
             for (var l = 0; l < doc.artLayers.length; l++) {
                 doc.activeLayer = activeLayers[l]
-                doc.activeLayer.visible = true;// hide the layer
+                doc.activeLayer.visible = true;// hshow all layers
             }
             endArray1.push("Background - " + bgColor)
             endArray1.reverse();
@@ -1791,8 +1791,6 @@ app.preferences.rulerUnits = oldPref
 //color function that separates out layers
 function bigColorFunctionLayers() {
 
-    const THRESHOLD = 0; // color pixels threshold
-
     var s2t = stringIDToTypeID,
         t2s = typeIDToStringID,
         colorsObj = {},
@@ -1838,7 +1836,6 @@ function bigColorFunctionLayers() {
 
     // if the color object is above the threshold push it to colorsArr Array
     for (var a in colorsObj) {
-        if (colorsObj[a] > THRESHOLD)
             colorsArr.push({ hex: a })
     }
 
