@@ -79,68 +79,70 @@ var colorFams = {
         arrayC: [],
     },
 }
+
+
 var colorKeys = Object.keys(colorFams)
 console.log(colorKeys)
 var finalArr = {}
-
+var tempArr = []
 
 for (var i in colorLibrary) {
     if (colorLibrary[i].familyName = 'Grey') {
-        colorFams.greyArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.greyArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'White') {
-        colorFams.whiteArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.whiteArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Black') {
-        colorFams.blackArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.blackArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Tan') {
-        colorFams.tanArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.tanArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Pink') {
-        colorFams.pinkArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.pinkArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Red') {
-        colorFams.redArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.redArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Orange') {
-        colorFams.orangeArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.orangeArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Yellow') {
-        colorFams.yellowArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.yellowArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Gold') {
-        colorFams.goldArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.goldArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Green') {
-        colorFams.greenArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.greenArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Blue') {
-        colorFams.blueArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.blueArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Purple') {
-        colorFams.purpleArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.purpleArr.arrayC.push(colorLibrary[i])
+        
 
     }
     else if (colorLibrary[i].familyName = 'Skin') {
-        colorFams.skinArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.skinArr.arrayC.push(colorLibrary[i])
+        
     }
     else if (colorLibrary[i].familyName = 'Brown') {
-        colorFams.brownArr.arrayC = (colorLibrary[i].colorCode)
-        console.log("pushed")
+        colorFams.brownArr.arrayC,push(colorLibrary[i])
+        
     }
 }
 
@@ -148,7 +150,7 @@ for (var i in colorLibrary) {
 
 
 console.log(colorKeys.length)
-for (var i = 0; i < colorKeys.length; i++) {
+//for (var i = 0; i < colorKeys.length; i++) {
    // var libEntry = colorFams[i].arrayC;
     //console.log(libEntry)
 
@@ -159,6 +161,6 @@ for (var i = 0; i < colorKeys.length; i++) {
 
     //console.log(colorKeys)}
     //finalArr.push(keys[i], colorFams[i])
-}
+//}
 
 //console.log(finalArr.toString())

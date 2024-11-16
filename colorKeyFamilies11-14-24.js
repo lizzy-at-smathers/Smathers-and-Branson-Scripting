@@ -1866,10 +1866,10 @@ function bigColorFunctionLayers() {
 
 
     // sorts the colors according to classification
-    // colorList.sort(function (a, b) {
-    //    return a.Classification - b.Classification
-    //});
-    for (var i in colorList) {
+    colorList.sort(function (a, b) {
+       return a.Classification - b.Classification
+    });
+   /* for (var i in colorList) {
         if (colorList.familyName = 'Grey') {
             greyArr.push(i)
         }
@@ -1914,7 +1914,7 @@ function bigColorFunctionLayers() {
             brownArr.push(i)
         }
     }
-
+*/
     
     // puts the color in extantColors in correct format
     for (var i in colorList) {
